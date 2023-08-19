@@ -12,7 +12,6 @@ export default function NavBar(){
     <NavBarContainer navbarscroll={navbarscroll}>
       <TopNavBar />
       <BottomNavBar />
-      
     </NavBarContainer>
   )
 }
@@ -21,6 +20,7 @@ interface scroll{
   navbarscroll: number
 }
 const NavBarContainer = styled.div<scroll>`
+  z-index: 2;
   position: fixed;
   display: flex;
   flex-wrap: wrap;

@@ -1,7 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import useGetNavBarScroll from "../../../hooks/useGetNavBarScroll"
 import useApearSignRegister from "../../../hooks/useApearSignRegister"
+import useCartStatus from "../../../hooks/useCartStatus"
+import Cart from "../../Cart/Cart"
 import { BsSearch } from "react-icons/bs"
 import { GoPerson } from "react-icons/go"
 import { BsCart2 } from "react-icons/bs"
@@ -11,11 +13,10 @@ export default function TopNavBar (){
 
   const { navbarscroll } = useGetNavBarScroll()
   const { apearSignRegister, signRegisterApear, signRegisterDesapear } = useApearSignRegister()
-  const [cartStatus, setCartStatus] = useState("off")
+  const { cartStatus, setCartStatus, cartStatusRef } = useCartStatus()
 
   return(
     <TopNavBarContainer>
-      
       <Logo navbarscroll={navbarscroll}/>
       <SearchInput>
         <input placeholder="Que estás buscando?" id="searchInputRef"/>
@@ -40,9 +41,13 @@ export default function TopNavBar (){
           <CartIcon onClick={() => setCartStatus("on")}/>
         </section>
       </ProfileCartIcons>
-      <CartBackground cartStatus={cartStatus} onClick={() => setCartStatus("off")}>
-
-      </CartBackground>
+      <CartContainer ref={cartStatusRef}>
+        <CartBackground onClick={() => setCartStatus("off")} />
+        <Cart 
+          cartStatus={cartStatus}
+          setCartStatus={setCartStatus}
+        />
+      </CartContainer>
     </TopNavBarContainer>
   )
 }
@@ -131,7 +136,10 @@ const SignOrRegister = styled.div<apearSignRegister>`
   height: auto;
   top: 43%;
   background-color: white;
-  border: 1px solid #9d9d9d;
+  border-bottom: 1px solid #9d9d9d;
+  border-right: 1px solid #9d9d9d;
+  border-left: 1px solid #9d9d9d;
+  padding-top: .5%;
 
   a{
     display: flex;
@@ -152,13 +160,14 @@ const CartIcon = styled(BsCart2)`
   width: 30px;
   cursor: pointer;
 `
-interface cartStatus{
-  cartStatus: string
-}
-const CartBackground = styled.div<cartStatus>`
+
+const CartContainer = styled.div`
   z-index: 1;
-  display: ${props => props.cartStatus === "on" ? "inline-block" : "none"};
+  display: none;
   position: absolute;
+`
+
+const CartBackground = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: #36363668;

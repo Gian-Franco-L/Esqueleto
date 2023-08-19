@@ -101,7 +101,6 @@ const ProductsList = styled.ul<productList>`
 
   li{
     width: 100%;
-    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px; 
   }
@@ -130,7 +129,6 @@ const BrandList = styled.ul<brandList>`
 
   li{
     width: 100%;
-    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px; 
   }
