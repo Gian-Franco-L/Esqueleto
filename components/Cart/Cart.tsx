@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
-import styled, { keyframes, css } from "styled-components"
+import CartStyles from "../../styles/Cart/Cart.module.css"
 import productService from "../../services/product"
 import Items from "./Items/Items"
+import Locals from "./Locals/Locals"
+import Shipping from "./Shipping/Shipping"
 import { v4 as uuidv4 } from "uuid"
 
 interface pageType{
@@ -11,6 +13,7 @@ interface pageType{
 export default function Cart({cartStatus, setCartStatus}: pageType){
 
   const [allArticles, setAllArticles] = useState<any[]>([]);
+  const cartItemsStatus = cartStatus === "on" ? "openCart" : "closeCart"
 
   useEffect(() =>{
     productService.getAll()
@@ -23,13 +26,21 @@ export default function Cart({cartStatus, setCartStatus}: pageType){
       })
   }, [])
 
+  useEffect(() => {
+    const body = document.getElementById("body")
+    if(cartStatus === "off"){
+      body ? body.style.overflowY = "inherit" : null
+      body ? body.style.position = "initial" : null
+    }
+  }, [cartStatus])
+
   return(
-    <CartContainer cartStatus={cartStatus}>
-      <Tittle>
+    <div className={`${CartStyles.cartContainer} ${CartStyles[cartItemsStatus]}`}>
+      <div className={CartStyles.tittle}>
         <h1>Carrito de compras</h1>
-        <CloseCartButton onClick={() => setCartStatus("off")}>X</CloseCartButton>
-      </Tittle>
-      <CartArticles>
+        <button className={CartStyles.closeCartButton} onClick={() => setCartStatus("off")}>X</button>
+      </div>
+      <div className={CartStyles.cartArticles}>
         {
           allArticles.map(item =>{
             return <Items 
@@ -38,133 +49,18 @@ export default function Cart({cartStatus, setCartStatus}: pageType){
                    />
           })
         }
-      </CartArticles>
-      <GreyBar />
-      <Price>
+      </div>
+      <div className={CartStyles.greyBar} />
+      <div className={CartStyles.price}>
         <p>Total:</p>
         <p>$1.500,00</p>
-      </Price>
-      <GreyBar />
-      <FinishBuy><p>Finalizar Compra</p></FinishBuy>
-    </CartContainer>
+      </div>
+      <div className={CartStyles.greyBar} />
+      <Shipping />
+      <div className={CartStyles.greyBar}/>
+      <Locals />
+      <div className={CartStyles.greyBar}/>
+      <button className={CartStyles.finishBuy}><p>Finalizar Compra</p></button>
+    </div>
   )
 }
-
-const openCartMovement = keyframes`
-  0%{
-    right: -500px;
-  }
-  100%{
-    right: 0;
-  }
-`
-const closeCartMovement = keyframes`
-  0%{
-    right: 0;
-  }
-  100%{
-    right: -500px;
-  }
-`
-
-const openCart = css`
-  animation-name: ${openCartMovement};
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier();
-  animation-fill-mode: forwards;
-`
-const closeCart = css`
-  animation-name: ${closeCartMovement};
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier();
-  animation-fill-mode: forwards;
-`
-
-interface cartStatus{
-  cartStatus: string
-}
-const CartContainer = styled.div<cartStatus>`
-  position: absolute;
-  right: -500px;
-  top: 0%;
-  height: 100%;
-  width: 500px;
-  background-color: white;
-
-  ${props => {
-    if(props.cartStatus === "on") return openCart
-    if(props.cartStatus === "off") return closeCart
-  }}
-`
-
-const Tittle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-  color: white;
-  background-color: black;
-`
-
-const CloseCartButton = styled.button`
-  position: absolute;
-  height: 25px;
-  width: 25px;
-  right: 30px;
-  font-size: 1.3rem;
-  color: white;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-`
-
-const CartArticles = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-height: 40%;
-  margin-top: 5%;
-  padding: 2%;
-  overflow-y: scroll;
-  overflow: auto;
-  ::-webkit-scrollbar {
-    display: none;
-  }
-`
-
-const GreyBar = styled.div`
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: 2%;
-  border: 1px solid rgba(0, 0, 0, 0.214);
-  width: 93%;
-`
-
-const Price = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 95%;
-  padding-left: 3%;
-  padding-right: 2%;
-
-  p{
-    font-size: 1.5rem;
-  }
-`
-
-const FinishBuy = styled.button`
-  height: 5%;
-  width: 93%;
-  margin-left: 2%;
-  border-radius: 10px;
-  border: none;
-  background-color: black;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-
-  &:hover{
-    background-color: white;
-    color: black;
-  }
-`

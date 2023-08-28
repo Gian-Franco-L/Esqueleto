@@ -1,0 +1,28 @@
+.slide{
+  z-index: 1;
+  position: relative;
+  min-width: 100vw;
+  max-height: 92.5vh;
+  overflow: hidden;
+  transition: 0.3s ease all;
+  background-color: #f1f1f1;
+  
+  @media only screen and (max-width: 991px){
+    max-height: 100vh;
+  }
+}
+.slide img{
+  width: 100%;
+}
+
+.slideBackground{
+  display: flex;
+  height: 86vh;
+  width: 100%;
+  margin-top: 3%;
+}
+.slideBackground img{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}

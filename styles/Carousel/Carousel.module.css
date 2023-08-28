@@ -1,0 +1,55 @@
+.mainContainer{
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4.5%;
+}
+
+.imgCarousel{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.buttonsCarousel{
+  z-index: 2;
+	position: absolute;
+	width: 98.3%;
+	height: 100%;
+	top: 2%;
+  margin-left: 1%;
+	pointer-events: none;
+}
+
+.button{
+  position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: all;
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	width: 80px;
+	height: 100%;
+	text-align: center;
+	transition: 0.3s ease all;
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}
+.right{
+  right: -5px
+}
+.left{
+  left: -5px
+}
+
+.leftArrow{
+  font-size: 2.5rem;
+  color: white;
+}
+.rightArrow{
+  font-size: 2.5rem;
+  color: white;
+}

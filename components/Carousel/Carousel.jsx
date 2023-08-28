@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import CarouselStyles from "../../styles/Carousel/Carousel.module.css"
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { next, back } from "./Functions/CarouselFunctions"
@@ -12,86 +12,20 @@ const Carousel = ({ children, intervalCarousel }) =>{
   const { slideCarousel, slideButtons } = useCarouselMovement({ setButtonsCarouselState, intervalCarousel })
 
   return(
-    <MainContainer ref={intervalCarousel}>
-      <ImgCarousel ref={slideCarousel}>
+    <div className={CarouselStyles.mainContainer} ref={intervalCarousel}>
+      <div className={CarouselStyles.imgCarousel} ref={slideCarousel}>
         {children}
-      </ImgCarousel>
-      <ButtonsCarousel ref={slideButtons}>
-        <Button onClick={() => buttonsCarouselState === "true" && back(slideCarousel, setButtonsCarouselState)}>
-					<LeftArrow />
-        </Button>
-        <Button right onClick={() => buttonsCarouselState === "true" && next(slideCarousel, setButtonsCarouselState)}>
-          <RightArrow />
-        </Button>
-      </ButtonsCarousel>
-    </MainContainer>
+      </div>
+      <div className={CarouselStyles.buttonsCarousel} ref={slideButtons}>
+        <div className={`${CarouselStyles.button} ${CarouselStyles.left}`} onClick={() => buttonsCarouselState === "true" && back(slideCarousel, setButtonsCarouselState)}>
+					<FaArrowLeft className={CarouselStyles.leftArrow} />
+        </div>
+        <div className={`${CarouselStyles.button} ${CarouselStyles.right}`} onClick={() => buttonsCarouselState === "true" && next(slideCarousel, setButtonsCarouselState)}>
+          <FaArrowRight className={CarouselStyles.rightArrow} />
+        </div>
+      </div>
+    </div>
   )
 }
 
-const LeftArrow = styled(FaArrowLeft)`
-  font-size: 2.5rem;
-  color: white;
-`
-
-const RightArrow = styled(FaArrowRight)`
-  font-size: 2.5rem;
-  color: white;
-`
-
-const MainContainer = styled.div`
-  z-index: 1;
-  position: relative;
-  overflow: hidden;
-  margin-top: 4.5%;
-`
-const ImgCarousel = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-`
-const Slide = styled.div`
-  z-index: 1;
-  position: relative;
-  min-width: 100vw;
-  max-height: 92.5vh;
-  overflow: hidden;
-  transition: 0.3s ease all;
-  background-color: #f1f1f1;
-  img {
-      width: 100%;
-  }
-  @media only screen and (max-width: 991px){
-    max-height: 100vh;
-  }
-`
-
-const ButtonsCarousel = styled.div`
-	z-index: 2;
-	position: absolute;
-	width: 98.3%;
-	height: 100%;
-	top: 2%;
-  margin-left: 1%;
-	pointer-events: none;
-  ${props => props.right ? "right: 1" : "left: 0"}
-`
-const Button = styled.div`
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: all;
-	background: none;
-	border: none;
-	cursor: pointer;
-	outline: none;
-	width: 80px;
-	height: 100%;
-	text-align: center;
-	transition: 0.3s ease all;
-  @media only screen and (max-width: 991px) {
-    display: none;
-  }
-	${props => props.right ? "right: -5px" : "left: -5px"}
-`
-
-export { Carousel, Slide }
+export { Carousel }

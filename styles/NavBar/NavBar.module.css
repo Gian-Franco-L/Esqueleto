@@ -1,0 +1,19 @@
+.NavBarContainer{
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid #9d9d9d;
+  transition-duration: .5s;
+}
+
+.normalNavBar{
+  height: 100px;
+}
+
+.smallNavBar{
+  height: 150px;
+}

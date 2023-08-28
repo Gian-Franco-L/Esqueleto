@@ -1,0 +1,61 @@
+.mainContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.homeAndFilters{
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  width: 75%;
+}
+
+.homeLink{
+  display: flex;
+}
+.homeLink a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.homeLink a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+.filters{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+  left: 12.5%;
+}
+.filters a{
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+}
+.filters a:hover{
+  color: rgb(92, 92, 92);
+}
+.filters h3:nth-of-type(2){
+  margin-top: 50px;
+}
+.filters p{
+  margin-top: 20px;
+}
+.filters p input{
+  margin-right: 10px;
+}
+
+.articles{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 65%;
+  margin-top: 3%;
+  margin-left: 10%;
+}
