@@ -1,0 +1,17 @@
+.slide{
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 400px;
+  width: 280px;
+  overflow: hidden;
+  transition: 0.3s ease all;
+}
+.slide img{
+  height: 200px;
+  width: 50%;
+  background-color: grey;
+}
+

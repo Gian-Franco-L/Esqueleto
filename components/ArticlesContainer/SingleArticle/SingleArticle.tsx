@@ -1,5 +1,5 @@
 import React from "react"
-import SingleArticleStyles from "../../../styles/Articles/SingleArticles.module.css"
+import SingleArticleStyles from "@/styles/Articles/SingleArticles.module.css"
 
 interface pageType{
   item: {
@@ -13,9 +13,8 @@ interface pageType{
   }
 }
 export default function SigleArticle({ item }: pageType){
-  
   return(
-    <main className={SingleArticleStyles.mainContainer}>
+    <div className={SingleArticleStyles.mainContainer}>
       <img src={item.Img} alt="" />
       <div>
         <h3>{item.Name}</h3>
@@ -25,6 +24,6 @@ export default function SigleArticle({ item }: pageType){
         <a href="#"></a>
         <button>Comprar</button>
       </section>
-    </main>
+    </div>
   )
 }

@@ -12,6 +12,8 @@
   position: relative;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 100%;
   width: 40%;
   font-size: 1.5rem;
 }
@@ -29,7 +31,6 @@
 .navList li{
   position: relative;
 }
-
 .productsList{
   list-style-type: none;
   position: absolute;
@@ -40,17 +41,17 @@
   border-left: 1px solid #9d9d9d;
   border-right: 1px solid #9d9d9d;
   align-items: center;
-  padding-top: 10%;
+  transition: .5s;
 }
 .productsList li{
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
 }
 .productsList li:hover{
   color: white;
-    background-color: black;
-    cursor: pointer;
+  background-color: black;
+  cursor: pointer;
 }
 
 .productListOn{
@@ -58,6 +59,13 @@
 }
 .productListOff{
   display: none;
+}
+
+.normalNavBar{
+  top: 170%;
+}
+.smallNavBar{
+  top: 125%;
 }
 
 .brandList{
@@ -70,7 +78,7 @@
   border-left: 1px solid #9d9d9d;
   border-right: 1px solid #9d9d9d;
   align-items: center;
-  padding-top: 10%;
+  transition: .5s;
 }
 .brandList li{
   width: 100%;

@@ -50,12 +50,3 @@
 .filters p input{
   margin-right: 10px;
 }
-
-.articles{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 65%;
-  margin-top: 3%;
-  margin-left: 10%;
-}

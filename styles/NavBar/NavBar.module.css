@@ -11,9 +11,8 @@
 }
 
 .normalNavBar{
-  height: 100px;
-}
-
-.smallNavBar{
   height: 150px;
+}
+.smallNavBar{
+  height: 100px;
 }

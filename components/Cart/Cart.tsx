@@ -6,11 +6,11 @@ import Locals from "./Locals/Locals"
 import Shipping from "./Shipping/Shipping"
 import { v4 as uuidv4 } from "uuid"
 
-interface pageType{
+interface pageTypes{
   cartStatus: string,
   setCartStatus: Function
 }
-export default function Cart({cartStatus, setCartStatus}: pageType){
+export default function Cart({cartStatus, setCartStatus}: pageTypes){
 
   const [allArticles, setAllArticles] = useState<any[]>([]);
   const cartItemsStatus = cartStatus === "on" ? "openCart" : "closeCart"
@@ -53,7 +53,7 @@ export default function Cart({cartStatus, setCartStatus}: pageType){
       <div className={CartStyles.greyBar} />
       <div className={CartStyles.price}>
         <p>Total:</p>
-        <p>$1.500,00</p>
+        <p>$0.000,00</p>
       </div>
       <div className={CartStyles.greyBar} />
       <Shipping />

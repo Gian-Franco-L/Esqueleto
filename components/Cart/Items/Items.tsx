@@ -1,8 +1,9 @@
 import React from "react"
+import ItemCant from "./ItemCant/ItemCant"
 import CartItemsStyles from "../../../styles/Cart/CartItems.module.css"
 import { BsTrash } from "react-icons/bs"
 
-interface pageType{
+interface pageTypes{
   item: {
     Name: string,
     Price: number,
@@ -13,17 +14,13 @@ interface pageType{
     Img: string
   }
 }
-export default function Items({ item }: pageType){
+export default function Items({ item }: pageTypes){
   return(
     <div className={CartItemsStyles.item}>
       <img src={item.Img} alt="" />
       <div className={CartItemsStyles.itemNameCant}>
         <p>{item.Name}</p>
-        <div className={CartItemsStyles.itemCant}>
-          <button>-</button>
-          <p>1</p>
-          <button>+</button>
-        </div>
+        <ItemCant />
       </div>
       <div className={CartItemsStyles.itemTrashPrice}>
         <BsTrash className={CartItemsStyles.trash}/>

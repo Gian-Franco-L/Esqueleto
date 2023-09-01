@@ -1,3 +1,4 @@
+'use client'
 import React from "react"
 import useGetNavBarScroll from "../../hooks/useGetNavBarScroll"
 import TopNavBar from "./TopNavBar/TopNavBar"
@@ -7,12 +8,12 @@ import NavBarStyles from "../../styles/NavBar/NavBar.module.css"
 export default function NavBar(){
 
   const { navbarscroll } = useGetNavBarScroll()
-  const navbarscrollStatus = navbarscroll > 30 ? "normalNavBar" : "smallNavBar"
+  const navbarscrollStatus = navbarscroll > 30 ? "smallNavBar" : "normalNavBar"
 
   return(
-    <div className={`${NavBarStyles.NavBarContainer} ${NavBarStyles[navbarscrollStatus]}`}>
-      <TopNavBar />
-      <BottomNavBar />
-    </div>
+    <nav className={`${NavBarStyles.NavBarContainer} ${NavBarStyles[navbarscrollStatus]}`}>
+      <TopNavBar navbarscrollStatus={navbarscrollStatus}/>
+      <BottomNavBar navbarscrollStatus={navbarscrollStatus}/>
+    </nav>
   )
 }

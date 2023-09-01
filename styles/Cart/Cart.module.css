@@ -109,3 +109,9 @@
   background-color: white;
   color: black;
 }
+
+@media (width <= 991px){
+  .cartContainer{
+    width: 100%;
+  }
+}

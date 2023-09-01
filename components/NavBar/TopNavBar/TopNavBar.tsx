@@ -1,38 +1,16 @@
-import React, { useEffect } from "react"
+import React from "react"
 import TopNavBarStyles from "../../../styles/NavBar/TopNavBar.module.css"
-import useGetNavBarScroll from "../../../hooks/useGetNavBarScroll"
-import useApearSignRegister from "../../../hooks/useApearSignRegister"
-import useCartStatus from "../../../hooks/useCartStatus"
-import Cart from "../../Cart/Cart"
+import Logo from "./Logo/Logo"
+import ProfileCartIcons from "./ProfileCartIcons/ProfileCartIcons"
 import { BsSearch } from "react-icons/bs"
-import { GoPerson } from "react-icons/go"
-import { BsCart2 } from "react-icons/bs"
 
-
-export default function TopNavBar (){
-
-  const { navbarscroll } = useGetNavBarScroll()
-  const { apearSignRegister, signRegisterApear, signRegisterDesapear } = useApearSignRegister()
-  const { cartStatus, setCartStatus, cartStatusRef } = useCartStatus()
-
-  const logoStatus = navbarscroll > 30 ? "smallLogo" : "normalLogo"
-  const signOrRegisterStatus = apearSignRegister === "on" ? "signOrRegisteOn" : "signOrRegisteOff"
-  
-  useEffect(() => {
-    const body = document.getElementById("body")
-    if(cartStatus === "off"){
-      body ? body.style.overflowY = "inherit" : null
-      body ? body.style.position = "initial" : null
-    }
-    if(cartStatus === "on"){
-      body ? body.style.overflowY = "hidden" : null
-      body ? body.style.position = "fixed" : null
-    }
-  }, [cartStatus])
-
+interface pageTypes{
+  navbarscrollStatus: string
+}
+export default function TopNavBar ({ navbarscrollStatus }: pageTypes){
   return(
     <div className={TopNavBarStyles.topNavBarContainer}>
-      <div className={`${TopNavBarStyles.logo} ${TopNavBarStyles[logoStatus]}`}/>
+      <Logo />
       <div className={TopNavBarStyles.searchInput}>
         <input placeholder="Que estás buscando?" />
         <div className={TopNavBarStyles.searchIcon}>
@@ -44,25 +22,7 @@ export default function TopNavBar (){
             : <SearchIcon><BsIconSearch /></SearchIcon>
         } */}
       </div>
-      <div className={TopNavBarStyles.profileCartIcons} onMouseLeave={signRegisterDesapear}>
-        <section onMouseEnter={signRegisterApear}>
-          <GoPerson className={TopNavBarStyles.profileIcon}/>
-          <div className={`${TopNavBarStyles.signOrRegister} ${TopNavBarStyles[signOrRegisterStatus]}`} onMouseLeave={signRegisterDesapear}>
-            <a href="">Registrarse</a>
-            <a href="">Iniciar sesión</a>
-          </div>
-        </section>
-        <section>
-          <BsCart2 className={TopNavBarStyles.cartIcon} onClick={() => setCartStatus("on")}/>
-        </section>
-      </div>
-      <div className={TopNavBarStyles.cartContainer} ref={cartStatusRef}>
-        <div className={TopNavBarStyles.cartBackground} onClick={() => setCartStatus("off")} />
-        <Cart 
-          cartStatus={cartStatus}
-          setCartStatus={setCartStatus}
-        />
-      </div>
+      <ProfileCartIcons navbarscrollStatus={navbarscrollStatus}/>
     </div>
   )
 }

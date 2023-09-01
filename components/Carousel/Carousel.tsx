@@ -1,13 +1,18 @@
-import React, { useState } from "react"
+'use client'
+import React, { ReactNode, useState, useRef } from "react"
 import CarouselStyles from "../../styles/Carousel/Carousel.module.css"
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { next, back } from "./Functions/CarouselFunctions"
 import { useCarouselMovement } from "../../hooks/useCarouselMovement";
 
-const Carousel = ({ children, intervalCarousel }) =>{
+interface pageTypes{
+  children: ReactNode,
+}
+const Carousel = ({ children }:pageTypes) =>{
 
   const [buttonsCarouselState, setButtonsCarouselState] = useState("true")
+  const intervalCarousel = useRef(null)
 
   const { slideCarousel, slideButtons } = useCarouselMovement({ setButtonsCarouselState, intervalCarousel })
 

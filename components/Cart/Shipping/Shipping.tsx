@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 import { BsTruck } from "react-icons/bs"
 import { TfiLocationPin } from "react-icons/tfi"
@@ -46,7 +47,7 @@ export default function Shipping(){
                 </div>
                   <button className={ShippingStyles.location}>
                     <p>Envio standard.</p>
-                    <h3>$2000,00</h3>
+                    <h3>$0000,00</h3>
                   </button>
                   <div className={ShippingStyles.locationAndTittle}>
                     <TfiLocationPin className={ShippingStyles.locationIcon}/>
@@ -54,11 +55,11 @@ export default function Shipping(){
                   </div>
                   <button className={ShippingStyles.location}>
                     <p>Punto de retiro numero uno.</p>
-                    <h3>$2000,00</h3>
+                    <h3>$0000,00</h3>
                   </button>
                   <button className={ShippingStyles.location}>
                     <p>Punto de retiro numero dos.</p>
-                    <h3>$2000,00</h3>
+                    <h3>$0000,00</h3>
                   </button>
                 </>
         }

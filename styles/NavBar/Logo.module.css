@@ -1,0 +1,13 @@
+.logo{
+  height: 70%;
+  grid-column: 2;
+  background-color: black;
+  align-self: center;
+  transition-duration: 1s;
+}
+.smallLogo{
+  width: 50%;
+}
+.normalLogo{
+  width: 100%;
+}

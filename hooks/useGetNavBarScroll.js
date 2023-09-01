@@ -16,5 +16,5 @@ export default function useGetNavBarScroll(){
     };
   }, [])
 
-  return {navbarscroll}
+  return { navbarscroll }
 }

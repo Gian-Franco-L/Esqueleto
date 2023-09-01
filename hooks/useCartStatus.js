@@ -14,5 +14,5 @@ export default function useCartStatus(){
     }
   }, [cartStatus])
 
-  return {cartStatus, setCartStatus, cartStatusRef}
+  return { cartStatus, setCartStatus, cartStatusRef }
 }
