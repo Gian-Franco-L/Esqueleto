@@ -1,10 +1,23 @@
-.mainContainer{
+.mainContainerPc{
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   border-top: 1px solid #9d9d9d;
+}
+.mainContainerMobile{
+  width: 100%;
+  display: none;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.searchInput{
+  position: relative;
+  display: flex;
+  height: 45px;
+  grid-column: 2/10;
+  align-self: center;
 }
 
 .navList{
@@ -62,10 +75,10 @@
 }
 
 .normalNavBar{
-  top: 170%;
+  top: 145%;
 }
 .smallNavBar{
-  top: 125%;
+  top: 110%;
 }
 
 .brandList{
@@ -96,4 +109,13 @@
 }
 .brandListOff{
   display: none;
+}
+
+@media (width <= 991px){
+  .mainContainerPc{
+    display: none;
+  }
+  .mainContainerMobile{
+    display: grid;
+  }
 }

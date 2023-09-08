@@ -1,0 +1,83 @@
+.categoriesAreaContainer{
+  position: fixed;
+  right: -500px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  overflow: auto;
+  padding-bottom: 1%;
+  transition: .5s;
+}
+
+.smallNavBar{
+  top: 10%;
+}
+.normalNavBar{
+  top: 15%;
+}
+
+.openCategoriesArea{
+  animation-name: openCategoriesAreaMovement;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes openCategoriesAreaMovement{
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.closeCategoriesArea{
+  animation-name: closeCategoriesAreaMovement;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes closeCategoriesAreaMovement {
+  0%{
+    left: 0;
+  }
+  100%{
+    left: -100%;
+  }
+}
+
+.tittle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+.closeCategoriesAreaButton{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 10%;
+  font-size: 1.3rem;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.categories{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 35%;
+  padding-left: 5%;
+}
+
+.categoriesTypes{
+  display: flex;
+  flex-direction: column;
+}

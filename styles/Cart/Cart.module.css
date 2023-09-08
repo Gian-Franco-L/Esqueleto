@@ -54,7 +54,7 @@
   position: absolute;
   height: 25px;
   width: 25px;
-  right: 30px;
+  right: 7%;
   font-size: 1.3rem;
   color: white;
   background-color: transparent;
@@ -113,5 +113,17 @@
 @media (width <= 991px){
   .cartContainer{
     width: 100%;
+  }
+  .finishBuy{
+    height: 40px;
+    margin-bottom: 3%;
+  }
+  .finishBuy:hover{
+    background-color: black;
+    color: white;
+  }
+  .finishBuy:active{
+    background-color: white;
+    color: black;
   }
 }

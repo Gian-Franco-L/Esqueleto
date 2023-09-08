@@ -9,6 +9,8 @@ export default function Logo(){
   const logoStatus = navbarscroll > 30 ? "smallLogo" : "normalLogo"
 
   return(
-    <div className={`${LogoStyles.logo} ${LogoStyles[logoStatus]}`}/>
+    <div className={`${LogoStyles.logo} ${LogoStyles[logoStatus]}`}>
+      <p>Logo</p>
+    </div>
   )
 }

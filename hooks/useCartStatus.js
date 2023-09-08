@@ -6,7 +6,7 @@ export default function useCartStatus(){
 
   useEffect(() =>{
     if(cartStatus === "on"){
-      if(cartStatusRef.current) cartStatusRef.current.style.display = 'inline-block'
+      if(cartStatusRef.current) cartStatusRef.current.style.display = 'initial'
     }else if(cartStatus === "off"){
       setTimeout(()=>{
         if(cartStatusRef.current) cartStatusRef.current.style.display = 'none'

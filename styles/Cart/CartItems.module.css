@@ -1,6 +1,6 @@
 .item{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 500px;
   padding-bottom: 50px;
@@ -8,14 +8,12 @@
 .item img{
   height: 60px;
   width: 40px;
-  margin-left: 5%;
-  margin-bottom: 2%;
 }
 
 .itemNameCant{
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
 }
 
 .itemTrashPrice{

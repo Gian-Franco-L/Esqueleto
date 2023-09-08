@@ -27,13 +27,18 @@
 .directLinksContainer{
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .directLinks{
   display: flex;
   justify-content: space-between;
-  width: 35%;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 650px;
 }
 .directLinks a{
+  width: 120px;
+  text-align: center;
   color: black;
   text-decoration: none;
 }
@@ -64,6 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .locationIcon{
   height: 25px;
@@ -74,10 +80,12 @@
 .paySectionContainer{
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .paySection{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 50%;
 }
 .paySection span{
@@ -87,23 +95,27 @@
   border: 1px solid rgb(219, 219, 219);
 }
 
-.shipping{
+.shippingContainer{
   display: flex;
   justify-content: center;
+  width: 100%;
 }
-.shipping span{
+.shippingSection{
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 25%;
+}
+.shippingSection span{
   padding: 4px;
   border: 1px solid rgb(219, 219, 219);
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
 .copyRight{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   font-size: .8rem;
 }
 .copyRight span{
@@ -121,4 +133,45 @@
 }
 .consumersDef p a{
   color: black;
+}
+
+@media (width <= 1315px){
+  .paySection{
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+@media (width <= 800px){
+  .shippingSection{
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+@media (width <= 495px){
+  .mainContainer{
+    height: 800px;
+  }
+  .mainContainer section{
+    margin-bottom: 20px;
+  }
+
+  .directLinks{
+    justify-content: center;
+    height: 150px;
+  }
+  
+  .consumersDef{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (width <= 235px){
+  .mainContainer{
+    height: 900px;
+  }
 }

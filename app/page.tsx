@@ -1,18 +1,17 @@
 import React from "react"
-import { Carousel } from "../components/Carousel/Carousel"
+import Wellcome from "../components/Wellcome/Wellcome"
 import { NewsCarousel } from "../components/NewsCarousel/NewsCarousel"
-import { Slides } from "../components/Carousel/Slides/Slides"
 import { Slides1 } from "@/components/NewsCarousel/Slides/Slides1"
 import { Slides2 } from "@/components/NewsCarousel/Slides/Slides2"
 import { Slides3 } from "@/components/NewsCarousel/Slides/Slides3"
+import CarouselBootstrap from "@/components/CarouselBootstrap/CarouselBootstrap"
 
 export default function Home() {
   
   return (
     <>
-      <Carousel>
-        <Slides />
-      </Carousel>
+      <CarouselBootstrap />
+      <Wellcome />
       <NewsCarousel>
         <Slides1 />
         <Slides2 />

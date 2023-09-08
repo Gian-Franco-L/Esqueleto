@@ -30,7 +30,7 @@ export default function Footer(){
     <main className={FooterStyles.mainContainer}>
       <section className={FooterStyles.directLinksContainer}>
         <div className={FooterStyles.directLinks}>
-          <Link href="/" style={{width: '110px', textAlign: 'center'}}>Home</Link>
+          <Link href="/" style={{}}>Home</Link>
           <Link href="/">Productos</Link>
           <Link href="/">Contacto</Link>
           <Link href="/">Quiénes somos</Link>
@@ -50,7 +50,9 @@ export default function Footer(){
       </section>
       <section className={FooterStyles.location}>
         <IoLocationOutline className={FooterStyles.locationIcon} />
-        <p>La Calandria 2814, Villa Adelina, Provincia de Buenos Aires</p>
+        <p>Dirección 0000,&nbsp;</p>
+        <p>Localidad,&nbsp;</p>
+        <p>Provincia de Buenos Aires</p>
       </section>
       <section className={FooterStyles.paySectionContainer}>
         <div className={FooterStyles.paySection}>
@@ -69,18 +71,21 @@ export default function Footer(){
           <span><Image src={tarjetaShopping} width={40} height={25} alt="tarjetaShopping"/></span>
         </div>
       </section>
-      <section className={FooterStyles.shipping}>
-        <span><Image src={oca} width={55} height={35} alt="oca"/></span>
-        <span><Image src={mercadoEnvios} width={55} height={35} alt="mercadoEnvios"/></span>
-        <span><Image src={correoArgentino} width={55} height={35} alt="correoArgentino"/></span>
+      <section className={FooterStyles.shippingContainer}>
+        <div className={FooterStyles.shippingSection}>
+          <span><Image src={oca} width={55} height={35} alt="oca"/></span>
+          <span><Image src={mercadoEnvios} width={55} height={35} alt="mercadoEnvios"/></span>
+          <span><Image src={correoArgentino} width={55} height={35} alt="correoArgentino"/></span>
+        </div>
       </section>
       <section className={FooterStyles.copyRight}>
-        <span><AiOutlineCopyrightCircle /><p>Copyright La Calandria - 2023</p></span>
+        <span><AiOutlineCopyrightCircle /><p>Copyright ********* - 2023</p></span>
         <p>Creado por GianFranco Lombardini</p>
         <p>Todos los derechos reservados.</p>
       </section>
       <section className={FooterStyles.consumersDef}>
-        <p>Defensa de las y los consumidores. Para reclamos <a href="https://autogestion.produccion.gob.ar/consumidores" target="blank">ingrese aquí</a></p>
+        <p>Defensa de las y los consumidores.&nbsp;</p>
+        <p>Para reclamos <a href="https://autogestion.produccion.gob.ar/consumidores" target="blank">ingrese aquí</a></p>
       </section>
     </main>
   )

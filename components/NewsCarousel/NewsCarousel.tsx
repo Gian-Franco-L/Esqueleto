@@ -17,17 +17,19 @@ const NewsCarousel = ({ children }:pageTypes) =>{
   const slideButtons = useRef(null)
 
   return(
-    <div className={NewsCarouselStyles.mainContainer} ref={intervalCarousel}>
-      <h1>Novedades</h1>
-      <div className={NewsCarouselStyles.imgCarousel} ref={slideCarousel}>
-        {children}
-      </div>
-      <div className={NewsCarouselStyles.buttonsCarousel} ref={slideButtons}>
-        <div className={`${NewsCarouselStyles.button} ${NewsCarouselStyles.left}`} onClick={() => buttonsCarouselState === "true" && back(slideCarousel, setButtonsCarouselState)}>
-					<FaArrowLeft className={NewsCarouselStyles.leftArrow} />
+    <div className={NewsCarouselStyles.mainContainer}>
+      <div className={NewsCarouselStyles.carousel} ref={intervalCarousel}>
+        <h1>Novedades</h1>
+        <div className={NewsCarouselStyles.imgCarousel} ref={slideCarousel}>
+          {children}
         </div>
-        <div className={`${NewsCarouselStyles.button} ${NewsCarouselStyles.right}`} onClick={() => buttonsCarouselState === "true" && next(slideCarousel, setButtonsCarouselState)}>
-          <FaArrowRight className={NewsCarouselStyles.rightArrow} />
+        <div className={NewsCarouselStyles.buttonsCarousel} ref={slideButtons}>
+          <div className={`${NewsCarouselStyles.button} ${NewsCarouselStyles.left}`} onClick={() => buttonsCarouselState === "true" && back(slideCarousel, setButtonsCarouselState)}>
+            <FaArrowLeft className={NewsCarouselStyles.leftArrow} />
+          </div>
+          <div className={`${NewsCarouselStyles.button} ${NewsCarouselStyles.right}`} onClick={() => buttonsCarouselState === "true" && next(slideCarousel, setButtonsCarouselState)}>
+            <FaArrowRight className={NewsCarouselStyles.rightArrow} />
+          </div>
         </div>
       </div>
     </div>

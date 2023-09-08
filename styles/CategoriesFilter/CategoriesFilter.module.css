@@ -1,0 +1,23 @@
+.filterWord{
+  width: 200px;
+  height: 25px;
+  border: 1px solid black;
+}
+
+.categoriesAreaContainer{
+  z-index: 1;
+  display: none;
+  position: absolute;
+}
+
+.categoriesAreaBackground{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0%;
+  left: 0%;
+  background-color: #36363668;
+  cursor: pointer;
+}
+
+

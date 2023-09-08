@@ -26,13 +26,13 @@ export default function Cart({cartStatus, setCartStatus}: pageTypes){
       })
   }, [])
 
-  useEffect(() => {
-    const body = document.getElementById("body")
-    if(cartStatus === "off"){
-      body ? body.style.overflowY = "inherit" : null
-      body ? body.style.position = "initial" : null
-    }
-  }, [cartStatus])
+  // useEffect(() => {
+  //   const body = document.getElementById("body")
+  //   if(cartStatus === "off"){
+  //     body ? body.style.overflowY = "inherit" : null
+  //     body ? body.style.position = "initial" : null
+  //   }
+  // }, [cartStatus])
 
   return(
     <div className={`${CartStyles.cartContainer} ${CartStyles[cartItemsStatus]}`}>
@@ -60,7 +60,9 @@ export default function Cart({cartStatus, setCartStatus}: pageTypes){
       <div className={CartStyles.greyBar}/>
       <Locals />
       <div className={CartStyles.greyBar}/>
-      <button className={CartStyles.finishBuy}><p>Finalizar Compra</p></button>
+      <button className={CartStyles.finishBuy}>
+        <p>Finalizar Compra</p>
+      </button>
     </div>
   )
 }

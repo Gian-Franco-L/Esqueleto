@@ -3,6 +3,7 @@ import React from "react"
 import BottomNavBarStyles from "../../../styles/NavBar/BottomNavBar.module.css"
 import { GrFormDown } from "react-icons/gr"
 import useApearProductsBrandsLists from "../../../hooks/useApearProductsBrandsLists"
+import Search from "@/components/Search/Search"
 
 interface pageTypes{
   navbarscrollStatus: string
@@ -21,8 +22,9 @@ export default function BottomNavBar({ navbarscrollStatus }: pageTypes){
   const brandListStatus = apearBrandsList === "on" ? "brandListOn" : "brandListOff"
 
   return(
-    <div className={BottomNavBarStyles.mainContainer}>
-      <ul className={BottomNavBarStyles.navList} onMouseLeave={() => (productsListDesapear(), brandsListDesapear())}>
+    <>
+      <div className={BottomNavBarStyles.mainContainerPc}>
+        <ul className={BottomNavBarStyles.navList} onMouseLeave={() => (productsListDesapear(), brandsListDesapear())}>
           <li>
             <div onMouseEnter={() => (productsListApear(), brandsListDesapear())}>
               <a href="">Productos</a><GrFormDown />
@@ -50,6 +52,12 @@ export default function BottomNavBar({ navbarscrollStatus }: pageTypes){
             <a href="#">Ofertas</a>
           </li>
         </ul>
-    </div>
+      </div>
+      <div className={BottomNavBarStyles.mainContainerMobile}>
+        <div className={BottomNavBarStyles.searchInput}>
+          <Search />
+        </div>
+      </div>
+    </>
   )
 }
