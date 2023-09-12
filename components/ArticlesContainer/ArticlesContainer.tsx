@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import SingleArticle from "./SingleArticle/SingleArticle"
+import Skeletons from "./Skeletons/Skeletons";
 import productService from "@/services/product"
 import { v4 as uuidv4 } from "uuid"
 import ArticlesContainerStyles from "@/styles/Articles/ArticlesContainer.module.css"
@@ -22,13 +23,14 @@ export default function ArticlesContainer(){
 
   return(
     <section className={ArticlesContainerStyles.articles}>
-      {
-        allArticles.map(item =>{
-          return <SingleArticle 
-                    item={item}
-                    key={uuidv4()}
-                  />
-        })
+      {allArticles.length !== 0
+        ? allArticles.map(item =>{
+            return <SingleArticle 
+                      item={item}
+                      key={uuidv4()}
+                    />
+          })
+        : <Skeletons />
       }
     </section>
   )
