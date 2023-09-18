@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ArticlesContainer from "@/components/ArticlesContainer/ArticlesContainer";
-import ArticlesStyle from "../../styles/Articles/Articles.module.css"
+import ArticlesStyle from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
 
 export default function Items(){

@@ -1,0 +1,89 @@
+.mainContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.homeLink{
+  position: absolute;
+  top: -11%;
+  display: flex;
+}
+.homeLink a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.homeLink a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+.articlesTotal{
+  position: relative;
+  width: 600px;
+  height: 100%;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.cartArticles{
+  display: flex;
+  flex-direction: column;
+  max-height: 40%;
+  margin-top: 5%;
+  padding: 2%;
+  overflow-y: scroll;
+  overflow: auto;
+}
+.cartArticles::-webkit-scrollbar {
+  display: none;
+}
+
+.formInfomation{
+  width: 600px;
+  margin-left: 2%;
+}
+
+.shipping{
+  display: flex;
+  align-items: center;
+}
+.truckIcon{
+  height: 20px;
+  width: 20px;
+  margin-right: 2%;
+}
+
+.location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  margin-top: 2%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: white;
+}
+.location:focus{
+  border: 1px solid red;
+}
+.location p{
+  margin-left: 6%;
+}
+.location h3{
+  margin-right: 6%;
+}
+
+.flexBetween{
+  display: flex;
+  justify-content: space-between;
+}
+
+.apearPerson{
+  display: initial;
+}
+.desapearPerson{
+  display: none;
+}

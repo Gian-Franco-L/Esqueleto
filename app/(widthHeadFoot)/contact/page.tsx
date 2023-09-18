@@ -5,7 +5,7 @@ export default function Contact(){
   return(
     <div className={ContactStyles.mainContainer}>
       <h1>Contacto</h1>
-      <form action="https://formspree.io/f/mbjqqqwy" method="POST">
+      <form action="" method="POST">
           <div>
               <label htmlFor="name">Nombre</label>
               <input name="nombre" type="email" id="name" required/>

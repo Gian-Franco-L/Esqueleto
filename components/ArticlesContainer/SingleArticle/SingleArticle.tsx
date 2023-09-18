@@ -23,6 +23,9 @@ export default function SigleArticle({ item }: pageType){
       <section>
         <a href="#"></a>
         <button>Comprar</button>
+        <a href="#" className={SingleArticleStyles.seeButton}>
+          <button>Ver</button>
+        </a>
       </section>
     </div>
   )

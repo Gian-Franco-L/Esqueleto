@@ -14,7 +14,7 @@ export default function Recovery(){
       </div>
       <h1>Cambiar Contraseña</h1>
       <p>Enviaremos un email para que puedas cambiar tu contraseña.</p>
-      <form action="https://formspree.io/f/mbjqqqwy" method="POST">
+      <form action="" method="POST">
           <div>
               <label htmlFor="mail">Email</label>
               <input name="mail" type="email" id="mail" required />

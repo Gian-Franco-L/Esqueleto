@@ -24,12 +24,3 @@
 .carousel-control-next, .carousel-control-prev{
   opacity: .8;
 }
-
-@media (width <= 991px){
-  .carousel{
-    height: 75vh;
-  }
-  .carousel-item img{
-    height: 75vh;
-  }
-}

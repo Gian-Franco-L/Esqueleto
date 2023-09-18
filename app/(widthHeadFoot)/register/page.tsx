@@ -14,7 +14,7 @@ export default function Register(){
       </div>
       <h1>Crear una cuenta</h1>
       <p>Con una cuenta tendras un historial de compras y se llenaran automaticamente algunos campos con tu informacion.</p>
-      <form action="https://formspree.io/f/mbjqqqwy" method="POST">
+      <form action="" method="POST">
           <div>
               <label htmlFor="name">Nombre y apellido</label>
               <input name="nombre" type="email" id="name" required/>

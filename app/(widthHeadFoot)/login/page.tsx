@@ -13,7 +13,7 @@ export default function LogIn(){
         <p>Login</p>
       </div>
       <h1>Iniciar sesión</h1>
-      <form action="https://formspree.io/f/mbjqqqwy" method="POST">
+      <form action="" method="POST">
           <div>
               <label htmlFor="mail">Email</label>
               <input name="mail" type="email" id="mail" required />
