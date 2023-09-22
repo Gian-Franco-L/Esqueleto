@@ -22,7 +22,7 @@ function CollapseToggle({ option } : PageTypes) {
       </Button>
       <Collapse in={open}>
         {
-          option === 'Products'
+          option === 'Productos'
             ? <div id="example-collapse-text">
                 <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto1</a>
                 <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto2</a>

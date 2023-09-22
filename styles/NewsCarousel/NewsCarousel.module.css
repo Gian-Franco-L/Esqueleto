@@ -48,9 +48,6 @@
 	height: 100%;
 	text-align: center;
 	transition: 0.3s ease all;
-  @media only screen and (max-width: 991px) {
-    display: none;
-  }
 }
 .right{
   right: -5px
