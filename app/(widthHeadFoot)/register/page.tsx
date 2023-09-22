@@ -17,7 +17,7 @@ export default function Register(){
       <form action="" method="POST">
           <div>
               <label htmlFor="name"><p>Nombre y apellido</p></label>
-              <input name="nombre" type="email" id="name" required/>
+              <input name="nombre" type="text" id="name" required/>
           </div>
           <div>
               <label htmlFor="mail"><p>Email</p></label>
