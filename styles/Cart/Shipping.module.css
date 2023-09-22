@@ -101,6 +101,9 @@
 }
 
 @media (width <= 991px){
+  .shipping a{
+    width: 80%;
+  }
   .location p{
     text-align: left;
     margin-left: 10px;
