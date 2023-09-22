@@ -1,5 +1,5 @@
 .NavBarContainer{
-  z-index: 2;
+  z-index: 6;
   position: fixed;
   display: flex;
   flex-wrap: wrap;

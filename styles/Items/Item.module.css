@@ -10,7 +10,7 @@
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  width: 90%;
+  width: 100%;
   margin-bottom: 80px;
 }
 /* .itemContainer div img{
@@ -24,13 +24,14 @@
 
 .itemPhotos{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: right;
   width: 50%;
 }
 .itemPhotos section{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-right: 5%;
 }
 .itemPhotos section div{
   display: flex;
@@ -96,6 +97,9 @@
 }
 
 @media (width <= 991px){
+  .mainContainer{
+    margin-top: 180px;
+  }
   .itemContainer{
     flex-direction: column;
     align-items: center;
@@ -108,7 +112,12 @@
   .itemPhotosMobile{
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 95%;
+  }
+  .img{
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(175, 175, 175);
   }
   .itemInfo{
     border-top: 1px solid grey;

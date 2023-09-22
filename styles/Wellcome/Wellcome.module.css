@@ -10,6 +10,12 @@
   font-size: clamp(16px, 5vw, 2.5rem);
 }
 .mainContainer p{
+  width: 65%;
   text-align: center;
-  font-size: clamp(16px, 4vw, 15px);
+}
+
+@media (width <= 991px){
+  .mainContainer{
+    height: 150px;
+  }
 }

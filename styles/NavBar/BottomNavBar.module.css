@@ -49,6 +49,7 @@
   position: absolute;
   height: auto;
   width: 100%;
+  margin-top: .5%;
   background-color: white;
   border-bottom: 1px solid #9d9d9d;
   border-left: 1px solid #9d9d9d;
@@ -86,6 +87,7 @@
   position: absolute;
   height: auto;
   width: 100%;
+  margin-top: .5%;
   background-color: white;
   border-bottom: 1px solid #9d9d9d;
   border-left: 1px solid #9d9d9d;
@@ -111,6 +113,11 @@
   display: none;
 }
 
+@media (width <= 1315px){
+  .navList{
+    width: 50%;
+  }
+}
 @media (width <= 991px){
   .mainContainerPc{
     display: none;

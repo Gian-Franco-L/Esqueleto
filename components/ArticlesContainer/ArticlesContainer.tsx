@@ -1,30 +1,22 @@
-'use client'
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SingleArticle from "./SingleArticle/SingleArticle"
 import Skeletons from "./Skeletons/Skeletons";
 import productService from "@/services/product"
 import { v4 as uuidv4 } from "uuid"
 import ArticlesContainerStyles from "@/styles/Articles/ArticlesContainer.module.css"
 
-export default function ArticlesContainer(){
+const getProducts = () =>{
+  return productService.getAll()
+}
 
-  const [allArticles, setAllArticles] = useState<any[]>([]);
+export default async function ArticlesContainer(){
 
-  useEffect(() =>{
-    productService.getAll()
-      .then((res) => {
-        let articlesAux = []
-        for(let i=0; i<10; i++){
-          articlesAux.push(res[i])
-        }
-        setAllArticles(articlesAux)
-      })
-  }, [])
+  const allArticles = await getProducts()
 
   return(
     <section className={ArticlesContainerStyles.articles}>
       {allArticles.length !== 0
-        ? allArticles.map(item =>{
+        ? allArticles.slice(0, 10).map((item:any) =>{
             return <SingleArticle 
                       item={item}
                       key={uuidv4()}

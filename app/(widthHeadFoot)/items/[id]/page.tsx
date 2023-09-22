@@ -13,7 +13,7 @@ interface pageTypes{
 }
 export default function item({ params }: pageTypes){
 
-  const { id } = params
+  // const { id } = params
 
   return(
     <main className={ItemStyles.mainContainer}>
@@ -39,15 +39,15 @@ export default function item({ params }: pageTypes){
         </article>
         <article className={ItemStyles.itemInfo}>
           <div className={ItemStyles.homeLink}>
-            <Link href="http://localhost:3000/">Inicio</Link>
+            <Link href="/">Inicio</Link>
             <p>&nbsp;&#62;&nbsp;</p>
-            <Link href="http://localhost:3000/items">Categoria</Link>
+            <Link href="/items">Categoria</Link>
             <p>&nbsp;&#62;&nbsp;</p>
             <p>Item</p>
           </div>
           <h1>Nombre del articulo</h1>
           <h3>$0000,00</h3>
-          <h4>Disponibilidad: Muchas/Pocas/Muy pocas</h4>
+          <h4>Disponibilidad: Muchas/Pocas/Numero exacto</h4>
           <h4>Categoria: xxxxxxxx</h4>
           <h4>Marca: xxxxxx</h4>
           <section style={{display: 'flex', alignItems: 'center'}}>

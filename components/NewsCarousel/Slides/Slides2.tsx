@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import SlidesStyles from "../../../styles/NewsCarousel/Slides.module.css"
 
 const Slides2 = () =>{
@@ -7,8 +8,9 @@ const Slides2 = () =>{
         <h3>Articulo</h3>
         <img src="" alt="foto" />
         <span>
-          <a href="#"></a>
-          <button>Ver</button>
+          <Link href="/items/123">
+            <button className={SlidesStyles.seeButton}>Ver</button>
+          </Link>
         </span>
       </section>
     )

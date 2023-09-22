@@ -29,6 +29,9 @@
   display: flex;
   margin-bottom: 40px;
 }
+.links p{
+  font-size: 1rem;
+}
 .links a{
   color: rgb(79, 79, 79);
   text-decoration: none;
@@ -49,4 +52,13 @@
 .passwordAlready a:hover{
   color: rgb(136, 136, 136);
   text-decoration: none;
+}
+
+@media (width <= 991px){
+  .mainContainer{
+    margin-bottom: 50px;
+  }
+  .mainContainer form{
+    width: 90%;
+  }
 }

@@ -9,7 +9,7 @@ export default function CategoriesFilters(){
   const { categoriesStatus, setCategoriesStatus, categoriesStatusRef } = useCategoriesStatus()
 
   return(
-    <>
+    <article>
       <button className={CategoriesFilterStyles.filterWord} onClick={() => setCategoriesStatus("on")}>
         Filtrar
       </button>
@@ -20,6 +20,6 @@ export default function CategoriesFilters(){
           setCategoriesStatus={setCategoriesStatus}
         />
       </div>
-    </>
+    </article>
   )
 }

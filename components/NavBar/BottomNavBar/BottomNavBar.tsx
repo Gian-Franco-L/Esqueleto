@@ -1,5 +1,6 @@
 'use client'
 import React from "react"
+import Link from "next/link"
 import BottomNavBarStyles from "../../../styles/NavBar/BottomNavBar.module.css"
 import { GrFormDown } from "react-icons/gr"
 import useApearProductsBrandsLists from "../../../hooks/useApearProductsBrandsLists"
@@ -27,29 +28,29 @@ export default function BottomNavBar({ navbarscrollStatus }: pageTypes){
         <ul className={BottomNavBarStyles.navList} onMouseLeave={() => (productsListDesapear(), brandsListDesapear())}>
           <li>
             <div onMouseEnter={() => (productsListApear(), brandsListDesapear())}>
-              <a href="">Productos</a><GrFormDown />
+              <Link href="/items">Productos</Link><GrFormDown />
             </div>
             <ul className={`${BottomNavBarStyles.productsList} ${BottomNavBarStyles[productListStatus]} ${BottomNavBarStyles[navbarscrollStatus]}`} onMouseLeave={productsListDesapear}>
-              <a href="#"><li>Producto1</li></a>
-              <a href="#"><li>Producto2</li></a>
-              <a href="#"><li>Producto3...</li></a>
+              <Link href="/items"><li>Producto1</li></Link>
+              <Link href="/items"><li>Producto2</li></Link>
+              <Link href="/items"><li>Producto3...</li></Link>
             </ul>
           </li>
           <li>
             <div onMouseEnter={() => (brandsListApear(), productsListDesapear())}>
-              <a href="">Marcas</a><GrFormDown />
+              <Link href="#">Marcas</Link><GrFormDown />
             </div>
             <ul className={`${BottomNavBarStyles.brandList} ${BottomNavBarStyles[brandListStatus]} ${BottomNavBarStyles[navbarscrollStatus]}`} onMouseLeave={brandsListDesapear}>
-              <a href="#"><li>Marca1</li></a>
-              <a href="#"><li>Marca2</li></a>
-              <a href="#"><li>Marca3...</li></a>
+              <Link href="#"><li>Marca1</li></Link>
+              <Link href="#"><li>Marca2</li></Link>
+              <Link href="#"><li>Marca3...</li></Link>
             </ul>
           </li>
           <li onMouseLeave={() => (productsListDesapear(), brandsListDesapear())}>
-            <a href="#">Contacto</a>
+            <Link href="/contact">Contacto</Link>
           </li>
           <li onMouseLeave={() => (productsListDesapear(), brandsListDesapear())}>
-            <a href="#">Ofertas</a>
+            <Link href="#">Ofertas</Link>
           </li>
         </ul>
       </div>

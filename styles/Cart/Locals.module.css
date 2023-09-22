@@ -30,7 +30,7 @@
   background-color: white;
 }
 .location:focus{
-  border: 1px solid red;
+  border: 1px solid rgb(50, 50, 150);
 }
 .location p{
   margin-left: 6%;

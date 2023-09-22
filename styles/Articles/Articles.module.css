@@ -11,11 +11,15 @@
   display: flex;
   justify-content: space-between;
   height: 20px;
-  width: 75%;
+  width: 80.5%;
+  margin-right: 20px;
 }
 
 .homeLink{
   display: flex;
+}
+.homeLink p{
+  font-size: 1rem;
 }
 .homeLink a{
   color: rgb(79, 79, 79);
@@ -32,9 +36,13 @@
 
 .categoriesAndFilersMobile{
   display: none;
+  width: 90%;
+  margin-bottom: 30px;
+}
+.categoriesAndFilersMobile article{
+  width: 30%;
 }
 .categoriesAndFilersMobile select{
-  width: 200px;
   height: 25px;
   border: 1px solid black;
 }

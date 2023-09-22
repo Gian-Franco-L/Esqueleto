@@ -30,3 +30,6 @@
   width: 20px;
   cursor: pointer;
 }
+.trash:hover{
+  transform: scale(1.2);
+}

@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import Link from "next/link";
 import LogoStyles from "@/styles/NavBar/Logo.module.css"
 import useGetNavBarScroll from "@/hooks/useGetNavBarScroll"
 
@@ -9,8 +10,8 @@ export default function Logo(){
   const logoStatus = navbarscroll > 30 ? "smallLogo" : "normalLogo"
 
   return(
-    <div className={`${LogoStyles.logo} ${LogoStyles[logoStatus]}`}>
+    <Link href="/" className={`${LogoStyles.logo} ${LogoStyles[logoStatus]}`}>
       <p>Logo</p>
-    </div>
+    </Link>
   )
 }

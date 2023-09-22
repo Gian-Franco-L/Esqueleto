@@ -27,3 +27,16 @@
 .mainContainer form button{
   width: 100%;
 }
+
+.links{
+  display: flex;
+  margin-bottom: 40px;
+}
+.links a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.links a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}

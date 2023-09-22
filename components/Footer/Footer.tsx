@@ -32,7 +32,7 @@ export default function Footer(){
         <div className={FooterStyles.directLinks}>
           <Link href="/" style={{}}>Home</Link>
           <Link href="/">Productos</Link>
-          <Link href="/">Contacto</Link>
+          <Link href="/contact">Contacto</Link>
           <Link href="/">Quiénes somos</Link>
         </div>
       </section>
@@ -73,9 +73,9 @@ export default function Footer(){
       </section>
       <section className={FooterStyles.shippingContainer}>
         <div className={FooterStyles.shippingSection}>
-          <span><Image src={oca} width={55} height={35} alt="oca"/></span>
-          <span><Image src={mercadoEnvios} width={55} height={35} alt="mercadoEnvios"/></span>
-          <span><Image src={correoArgentino} width={55} height={35} alt="correoArgentino"/></span>
+          <span><Image src={oca} width={64} height={32} alt="oca"/></span>
+          <span><Image src={mercadoEnvios} width={64} height={32} alt="mercadoEnvios"/></span>
+          <span><Image src={correoArgentino} width={64} height={32} alt="correoArgentino"/></span>
         </div>
       </section>
       <section className={FooterStyles.copyRight}>

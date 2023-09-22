@@ -1,19 +1,19 @@
 import React from "react";
 import Link from "next/link";
-import RecoveryStyles from "../../styles/Recovery/Recovery.module.css"
+import RecoveryStyles from "@/styles/Recovery/Recovery.module.css"
 
 export default function Recovery(){
   return(
     <div className={RecoveryStyles.mainContainer}>
       <div className={RecoveryStyles.links}>
-        <Link href="http://localhost:3000/">Inicio</Link>
+        <Link href="/">Inicio</Link>
         <p>&nbsp;&#62;&nbsp;</p>
-        <Link href="http://localhost:3000/">Mi cuenta</Link>
+        <Link href="/login">Login</Link>
         <p>&nbsp;&#62;&nbsp;</p>
         <p>Cambiar Contraseña</p>
       </div>
       <h1>Cambiar Contraseña</h1>
-      <p>Enviaremos un email para que puedas cambiar tu contraseña.</p>
+      <p className={RecoveryStyles.explanation}>Enviaremos un email para que puedas cambiar tu contraseña.</p>
       <form action="" method="POST">
           <div>
               <label htmlFor="mail">Email</label>

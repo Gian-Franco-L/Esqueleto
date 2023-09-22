@@ -2,12 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 200px;
+}
+
+.mainContainer p{
+  font-size: clamp(.5rem , 4vw, 1rem);
 }
 
 .homeLink{
   position: absolute;
-  top: -11%;
+  top: -50px;
   display: flex;
 }
 .homeLink a{
@@ -17,6 +21,9 @@
 .homeLink a:hover{
   color: rgb(136, 136, 136);
   text-decoration: none;
+}
+.homeLink p{
+  font-size: 1rem;
 }
 
 .articlesTotal{
@@ -67,7 +74,7 @@
   background-color: white;
 }
 .location:focus{
-  border: 1px solid red;
+  border: 1px solid rgb(50, 50, 150);
 }
 .location p{
   margin-left: 6%;
@@ -86,4 +93,22 @@
 }
 .desapearPerson{
   display: none;
+}
+
+@media (width <= 1225px){
+  .formInfomation{
+    margin-top: 50px;
+  }
+}
+@media (width <= 991px){
+  .mainContainer{
+    margin-top: 60px;
+  }
+  .articlesTotal{
+    width: 90%;
+  }
+  .formInfomation{
+    width: 90%;
+    margin-bottom: 5%;
+  }
 }

@@ -17,7 +17,7 @@ export default function HamburgerArea({ hamburgerStatus, setHamburgerStatus }: P
       <div className={HamburgerAreaStyles.tittle}>
         <button className={HamburgerAreaStyles.closeHamburgerAreaButton} onClick={() => setHamburgerStatus("off")}>X</button>
       </div>
-      <CollapseToggle option={"Products"}/>
+      <CollapseToggle option={"Productos"}/>
       <CollapseToggle option={"Marcas"}/>
       <CollapseToggle option={"Otros"}/>
       <div style={{width: '100%', borderTop: '1px solid black'}}></div>

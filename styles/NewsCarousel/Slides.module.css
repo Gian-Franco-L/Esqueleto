@@ -12,6 +12,9 @@
 .slide img{
   height: 200px;
   width: 50%;
-  background-color: grey;
+  background-color: rgb(175, 175, 175);
+}
+.seeButton{
+  margin-top: 10px;
 }
 

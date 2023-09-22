@@ -10,6 +10,7 @@
   padding-bottom: 1%;
 }
 
+
 .openCart{
   animation-name: openCartMovement;
   animation-duration: 1s;
@@ -125,5 +126,22 @@
   .finishBuy:active{
     background-color: white;
     color: black;
+  }
+
+  @keyframes openCartMovement{
+    0%{
+      right: -100%;
+    }
+    100%{
+      right: 0;
+    }
+  }
+  @keyframes closeCartMovement {
+    0%{
+      right: 0;
+    }
+    100%{
+      right: -100%;
+    }
   }
 }

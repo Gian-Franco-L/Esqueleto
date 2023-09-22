@@ -5,7 +5,6 @@
   height: 450px;
   margin-top: 200px;
   margin-bottom: 50px;
-
 }
 .mainContainer h1{
   margin-bottom: 20px;
@@ -33,6 +32,9 @@
   display: flex;
   margin-bottom: 50px;
 }
+.links p{
+  font-size: 1rem;
+}
 .links a{
   color: rgb(79, 79, 79);
   text-decoration: none;
@@ -40,4 +42,21 @@
 .links a:hover{
   color: rgb(136, 136, 136);
   text-decoration: none;
+}
+
+.explanation{
+  text-align: center;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+@media (width <= 991px){
+  .mainContainer{
+    height: 400px;
+    margin-bottom: 0px;
+  }
+  .mainContainer form{
+    height: 50%;
+    width: 90%;
+  }
 }

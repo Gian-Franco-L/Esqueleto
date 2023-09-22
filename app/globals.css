@@ -91,11 +91,15 @@
 * h3{
   margin: 0;
 }
+* h4{
+  margin: 0;
+}
 * h5{
   margin: 0;
 }
 * p{
   margin: 0;
+  font-size: clamp(.5rem, 4vw, 1rem);
 }
 * ul{
   margin: 0;

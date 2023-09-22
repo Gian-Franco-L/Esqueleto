@@ -24,18 +24,18 @@ function CollapseToggle({ option } : PageTypes) {
         {
           option === 'Products'
             ? <div id="example-collapse-text">
-                <a className={CollapseToggleStyle.itemCollapse} href="">Producto1</a>
-                <a className={CollapseToggleStyle.itemCollapse} href="">Producto2</a>
-                <a className={CollapseToggleStyle.itemCollapse} href="">Producto3</a>
+                <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto1</a>
+                <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto2</a>
+                <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto3</a>
               </div>
             : option === 'Marcas'
                 ? <div id="example-collapse-text">
-                    <a className={CollapseToggleStyle.itemCollapse} href="">Marca1</a>
-                    <a className={CollapseToggleStyle.itemCollapse} href="">Marca2</a>
-                    <a className={CollapseToggleStyle.itemCollapse} href="">Marca3</a>
+                    <a className={CollapseToggleStyle.itemCollapse} href="/items">Marca1</a>
+                    <a className={CollapseToggleStyle.itemCollapse} href="/items">Marca2</a>
+                    <a className={CollapseToggleStyle.itemCollapse} href="/items">Marca3</a>
                   </div>
                 : <div id="example-collapse-text">
-                    <a href="" className={CollapseToggleStyle.itemCollapse}>Contacto</a>
+                    <a href="/contact" className={CollapseToggleStyle.itemCollapse}>Contacto</a>
                     <a href="" className={CollapseToggleStyle.itemCollapse}>Ofertas</a>
                   </div>
         }

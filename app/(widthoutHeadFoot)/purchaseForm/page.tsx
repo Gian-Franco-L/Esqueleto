@@ -27,11 +27,11 @@ export default function PurchaseForm(){
     <div className={PurchaseFormStyles.mainContainer}>
       <section className={PurchaseFormStyles.articlesTotal}>
         <article className={PurchaseFormStyles.homeLink}>
-          <Link href="http://localhost:3000/">Inicio</Link>
+          <Link href="/">Inicio</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Chekout</p>
+          <p>Checkout</p>
         </article>
-        <article>
+        <article style={{minHeight: '250px'}}>
           {
             allArticles.map(item =>{
               return <ItemsOnCart 
@@ -172,7 +172,7 @@ export default function PurchaseForm(){
             </div>
           </article>
           <article>
-            <h3 style={{marginBottom: '1%', marginTop: '3%'}}>Domicilio del comprador/destinatario</h3>
+            <h3 style={{marginBottom: '1%', marginTop: '10%'}}>Domicilio del comprador/destinatario</h3>
             <p>Calle</p>
             <label htmlFor="street" />
             <input

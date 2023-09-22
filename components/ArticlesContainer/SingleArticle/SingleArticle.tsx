@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import SingleArticleStyles from "@/styles/Articles/SingleArticles.module.css"
 
 interface pageType{
@@ -21,11 +22,11 @@ export default function SigleArticle({ item }: pageType){
         <p>${item.Price}</p>
       </div>
       <section>
-        <a href="#"></a>
+        <Link href="/items/123"></Link>
         <button>Comprar</button>
-        <a href="#" className={SingleArticleStyles.seeButton}>
+        <Link href="/items/123" className={SingleArticleStyles.seeButton}>
           <button>Ver</button>
-        </a>
+        </Link>
       </section>
     </div>
   )

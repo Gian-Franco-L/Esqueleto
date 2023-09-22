@@ -9,6 +9,14 @@
 .mainContainer h1{
   margin-bottom: 20px;
 }
+.mainContainer p{
+  font-size: clamp(.5rem, 4vw, 1rem);
+}
+.explanation{
+  text-align: center;
+  margin-left: 3%;
+  margin-right: 3%;
+}
 .mainContainer form{
   display: flex;
   flex-direction: column;
@@ -33,6 +41,9 @@
   display: flex;
   margin-bottom: 50px;
 }
+.links p{
+  font-size: 1rem;
+}
 .links a{
   color: rgb(79, 79, 79);
   text-decoration: none;
@@ -53,4 +64,13 @@
 .accountAlready a:hover{
   color: rgb(136, 136, 136);
   text-decoration: none;
+}
+
+@media (width <= 991px){
+  .mainContainer{
+    margin-bottom: 50px;
+  }
+  .mainContainer form{
+    width: 90%;
+  }
 }
