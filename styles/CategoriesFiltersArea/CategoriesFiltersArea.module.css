@@ -86,3 +86,8 @@
   flex-direction: column;
   margin-bottom: 20px;
 }
+
+.categoriesTypes a{
+  color: black;
+  text-decoration: none;
+}

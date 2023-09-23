@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import CategoriesFiltersAreaStyles from "@/styles/CategoriesFiltersArea/CategoriesFiltersArea.module.css"
 import useGetNavBarScroll from "@/hooks/useGetNavBarScroll";
 import { GrFormDown } from "react-icons/gr"
@@ -22,9 +23,9 @@ export default function CategoriesFiltersArea({ categoriesStatus, setCategoriesS
       <section className={CategoriesFiltersAreaStyles.categories}>
         <article className={CategoriesFiltersAreaStyles.categoriesTypes}>
           <h3>Categorias</h3>
-          <a href="#">Tipo1</a>
-          <a href="#">Tipo2</a>
-          <a href="#">Tipo3</a>
+          <Link href="#">Tipo1</Link>
+          <Link href="#">Tipo2</Link>
+          <Link href="#">Tipo3</Link>
         </article>
         <article>
           <h3>Filtrar por</h3>
