@@ -17,7 +17,6 @@ export default async function Admin(){
   return(
     <div className={AdminStyle.mainContainer}>
       <Link href="/admin/pending" className={AdminStyle.backArrow}><AiOutlineArrowLeft className={AdminStyle.arrowLeft}/></Link>
-      <Link href="/admin" className={AdminStyle.nextArrow}><AiOutlineArrowRight className={AdminStyle.arrowRight}/></Link>
       <div className={AdminStyle.topHorizontalLineGrid}>
         <h4 className={`${AdminStyle.flex} ${AdminStyle.barName}`}>Nombre</h4>
         <h4 className={`${AdminStyle.flex} ${AdminStyle.barPrice}`}>Precio</h4>
