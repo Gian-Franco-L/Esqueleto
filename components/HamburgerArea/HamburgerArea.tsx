@@ -17,17 +17,17 @@ export default function HamburgerArea({ hamburgerStatus, setHamburgerStatus }: P
       <div className={HamburgerAreaStyles.tittle}>
         <button className={HamburgerAreaStyles.closeHamburgerAreaButton} onClick={() => setHamburgerStatus("off")}>X</button>
       </div>
-      <div className={HamburgerAreaStyles.collapseContainer}>
+      <div className={HamburgerAreaStyles.collapseOptions}>
         <CollapseToggle option={"Productos"}/>
         <CollapseToggle option={"Marcas"}/>
         <CollapseToggle option={"Otros"}/>
+        <div style={{width: '100%', borderTop: '1px solid black'}}></div>
       </div>
       <section className={HamburgerAreaStyles.signInRegister}>
         <GoPerson className={HamburgerAreaStyles.profileIcon}/>
         <h2>Crear Cuenta</h2>
         <h2>Iniciar Sesion</h2>
       </section>
-      <div style={{width: '100%', borderTop: '1px solid black'}}></div>
     </div>
   )
 }
