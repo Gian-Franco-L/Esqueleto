@@ -37,6 +37,7 @@
 }
 
 .hamburgerAreaBackground{
+  position: relative;
   height: 100vh;
   width: 100vw;
   background-color: #36363668;

@@ -24,11 +24,12 @@ export default function HamburgerArea({ hamburgerStatus, setHamburgerStatus }: P
         <div style={{width: '100%', borderTop: '1px solid black'}}></div>
         
       </div> */}
-      <div className={HamburgerAreaStyles.signInRegister}>
-          <GoPerson className={HamburgerAreaStyles.profileIcon}/>
-          <h2>Crear Cuenta</h2>
-          <h2>Iniciar Sesion</h2>
-        </div>
+      {/* <div className={HamburgerAreaStyles.signInRegister}>
+        <GoPerson className={HamburgerAreaStyles.profileIcon}/>
+        <h2>Crear Cuenta</h2>
+        <h2>Iniciar Sesion</h2>
+      </div> */}
+      <h1>hola</h1>
     </div>
   )
 }
