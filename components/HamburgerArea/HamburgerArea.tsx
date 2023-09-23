@@ -23,11 +23,11 @@ export default function HamburgerArea({ hamburgerStatus, setHamburgerStatus }: P
         <CollapseToggle option={"Otros"}/>
         <div style={{width: '100%', borderTop: '1px solid black'}}></div>
       </div>
-      <section className={HamburgerAreaStyles.signInRegister}>
+      <div className={HamburgerAreaStyles.signInRegister}>
         <GoPerson className={HamburgerAreaStyles.profileIcon}/>
         <h2>Crear Cuenta</h2>
         <h2>Iniciar Sesion</h2>
-      </section>
+      </div>
     </div>
   )
 }
