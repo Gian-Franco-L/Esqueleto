@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import HamburgerAreaStyles from "@/styles/HamburgerArea/HamburgerArea.module.css"
 import { GrFormDown } from "react-icons/gr"
 import { GoPerson } from "react-icons/go"
@@ -18,8 +19,8 @@ export default function HamburgerArea({ hamburgerStatus, setHamburgerStatus }: P
         <button className={HamburgerAreaStyles.closeHamburgerAreaButton} onClick={() => setHamburgerStatus("off")}>X</button>
         <div className={HamburgerAreaStyles.signInRegister}>
           <GoPerson className={HamburgerAreaStyles.profileIcon}/>
-          <h2>Crear Cuenta</h2>
-          <h2>Iniciar Sesion</h2>
+          <Link href="/register" onClick={() => setHamburgerStatus("off")}><h2>Crear Cuenta</h2></Link>
+          <Link href="/login" onClick={() => setHamburgerStatus("off")}><h2>Iniciar Sesion</h2></Link>
         </div>
       </div>
       <div className={HamburgerAreaStyles.collapseOptions}>
@@ -27,9 +28,7 @@ export default function HamburgerArea({ hamburgerStatus, setHamburgerStatus }: P
         <CollapseToggle option={"Marcas"}/>
         <CollapseToggle option={"Otros"}/>
         <div style={{width: '100%', borderTop: '1px solid black'}}></div>
-        
       </div>
-      
     </div>
   )
 }

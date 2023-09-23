@@ -85,6 +85,10 @@
 .signInRegister h2{
   font-size: 1rem;
 }
+.signInRegister a{
+  color: white;
+  text-decoration: none;
+}
 
 .profileIcon{
   height: 70%;
